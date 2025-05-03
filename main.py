@@ -82,5 +82,5 @@ async def chat(input: ChatInput):
 
 # Ejecutar servidor (solo si es llamado directamente, no como módulo)
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # Usa el puerto de la variable de entorno o 8000 por defecto
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 8000))  # Usa el puerto de Render si está disponible, de lo contrario, usa 8000
+    uvicorn.run(app, host="0.0.0.0", port=port)
