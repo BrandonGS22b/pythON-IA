@@ -77,6 +77,7 @@ async def chat(input: ChatInput):
         response = qa_dict.get(input.message, "Lo siento, no entiendo esa pregunta.")
         return {"response": response}
     except Exception as e:
+        
         print("Error en el servidor:", str(e))
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
@@ -84,3 +85,4 @@ async def chat(input: ChatInput):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))  # Usa el puerto de Render si está disponible, de lo contrario, usa 8000
     uvicorn.run(app, host="0.0.0.0", port=port)
+    print("Usando el puerto:", port)
