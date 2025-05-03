@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+import os
+import uvicorn
 # Inicializar FastAPI
 app = FastAPI()
 
@@ -69,12 +70,17 @@ qa_dict = {
 }
 
 # Endpoint
+# Endpoint
 @app.post("/chat")
 async def chat(input: ChatInput):
     try:
-        # Obtener la respuesta desde el diccionario
         response = qa_dict.get(input.message, "Lo siento, no entiendo esa pregunta.")
         return {"response": response}
     except Exception as e:
         print("Error en el servidor:", str(e))
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+# Ejecutar servidor (solo si es llamado directamente, no como módulo)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
