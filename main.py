@@ -1,20 +1,26 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+import os
+import uvicorn
+# Inicializar FastAPI
 app = FastAPI()
 
+# Configurar CORS
 app.add_middleware(
     CORSMiddleware,
+      # frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_origins=["*"],
+     allow_origins=["*"],  # Permitir cualquier origen
 )
 
+# Esquema de entrada
 class ChatInput(BaseModel):
     message: str
 
+# Diccionario de preguntas y respuestas
 qa_dict = {
     "El esmalte de uñas no seca y se levanta rápido": "¡Esto puede deberse a humedad, falta de prepado de la uña o esmalte de baja calidad. Aquí tienes una guía para resolverlo: https://youtu.be/Vrw0PDAf_RI?si=rkm9ln-A92UkD9lK",
     "El tinte de cabello quedó muy oscuro ¿que debo hacer": "Para aclarar un tinte oscuro o corregir el tono, te recomendamos seguir estos pasos profesionales. Revisa este video con técnicas seguras: https://youtu.be/oddTU-Gd0qI?si=5GyB1qPTT3ckOSEd",
@@ -39,10 +45,10 @@ qa_dict = {
     "Que haces": "Estoy aquí para ayudarte. ¿En qué puedo asistirte hoy?",
     "De que puedes hablar": "Puedo hablar sobre una gran variedad de temas, como tecnología, salud, belleza, entretenimiento, y mucho más. ¿De qué te gustaría charlar?",
     "Cuentame un chiste": "Claro, aquí va uno: ¿Por qué los libros de matemáticas están tristes? Porque tienen demasiados problemas. 😂",
-    "Tienes alguna recomendación para una película": "¡Claro! Si te gustan las películas de acción, te recomiendo Mad Max: Fury Road. Si prefieres algo más relajado, La vida es bella es una opción increíble. ¿Qué tipo de películas te gustan?",
+    "Tienes alguna recomendación para una película": "¡Claro! Si te gustan las películas de acción, te recomiendo *Mad Max: Fury Road*. Si prefieres algo más relajado, *La vida es bella* es una opción increíble. ¿Qué tipo de películas te gustan?",
     "Que opinas de la inteligencia artificial": "Creo que la inteligencia artificial tiene un potencial impresionante. Puede mejorar muchos aspectos de nuestra vida diaria, desde la medicina hasta la educación. ¿Tú qué opinas?",
-    "Tienes alguna recomendación de música?": "Si te gustan los géneros relajantes, te recomiendo escuchar a Billie Eilish o Lorde. Si prefieres algo más animado, tal vez te gusten Imagine Dragons o The Weeknd. ¿Qué estilo de música prefieres?",
-    "Cómo te llamas?": "No tengo un nombre como tal, pero puedes llamarme IA o como prefieras. 😊 ¿Y tú, cómo te llamas?",
+    "Tienes alguna recomendación de música?": "Si te gustan los géneros relajantes, te recomiendo escuchar a *Billie Eilish* o *Lorde*. Si prefieres algo más animado, tal vez te gusten *Imagine Dragons* o *The Weeknd*. ¿Qué estilo de música prefieres?",
+    "Cómo te llamas?": "No tengo un nombre como tal, pero puedes llamarme *IA* o como prefieras. 😊 ¿Y tú, cómo te llamas?",
     "Que sabes de los gatos": "¡Los gatos son fascinantes! Son animales muy independientes, pero también pueden ser muy cariñosos. ¿Tienes un gato?",
     "Te gustan los perros": "¡Sí! Los perros son increíbles. Son leales y siempre están dispuestos a hacerte compañía. ¿Tienes un perro?",
     "Que opinas del clima hoy": "Como soy una IA, no tengo sensación del clima, pero si me dices en qué ciudad estás, puedo buscar información sobre el clima actual para ti.",
@@ -58,16 +64,26 @@ qa_dict = {
     "Que es el amor?": "El amor es un sentimiento profundo y complejo que puede manifestarse en muchas formas: amor entre pareja, familia, amigos o incluso por algo que nos apasiona. ¿Tú cómo lo ves?",
     "Cuál es tu color favorito": "No tengo una preferencia personal, pero el azul es muy popular entre las personas. ¿Y el tuyo?",
     "Puedes ayudarme a resolver un problema": "¡Por supuesto! Dime cuál es tu problema y haré lo mejor que pueda para ayudarte.",
-    "Sabes algún truco útil": "Claro, un truco útil es el de usar atajos de teclado para mejorar tu productividad. Por ejemplo, en la mayoría de los navegadores puedes presionar Ctrl + T para abrir una nueva pestaña rápidamente. ¿Te interesa aprender más trucos?",
+    "Sabes algún truco útil": "Claro, un truco útil es el de usar atajos de teclado para mejorar tu productividad. Por ejemplo, en la mayoría de los navegadores puedes presionar *Ctrl + T* para abrir una nueva pestaña rápidamente. ¿Te interesa aprender más trucos?",
     "Que piensas sobre la tecnología": "Creo que la tecnología ha cambiado el mundo de muchas maneras, desde mejorar la comunicación hasta facilitar el acceso a la información. ¿A ti qué te parece?",
     "Que es lo más interesante de la historia": "La historia está llena de eventos fascinantes. Uno de los momentos más interesantes fue la Revolución Industrial, que cambió por completo la forma en que vivimos. ¿Te interesa algún período histórico en particular?",
 }
 
-
+# Endpoint
+# Endpoint
 @app.post("/chat")
 async def chat(input: ChatInput):
-    question = input.message.lower()
-    answer = qa_dict.get(question)
-    if not answer:
-        raise HTTPException(status_code=404, detail="Pregunta no encontrada.")
-    return {"answer": answer}
+    try:
+        print(f"Mensaje recibido: {input.message}")  # Para ver lo que llega
+        response = qa_dict.get(input.message, "Lo siento, no entiendo esa pregunta.")
+        return {"response": response}
+    except Exception as e:
+        print("Error en el servidor:", str(e))
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+# Ejecutar servidor (solo si es llamado directamente, no como módulo)
+if __name__ == "__main__":
+    import uvicorn
+
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
