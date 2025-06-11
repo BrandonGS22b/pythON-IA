@@ -78,34 +78,34 @@ qa_dict = {
     "- Exceso de tareas simultáneas: Asignar servicios complejos (ej: coloración + cortes) sin tiempos de transición.\n"
     "- Actualizaciones constantes: Cambios en productos/protocolos sin documentación adecuada.",
 
-    "Cómo se manifiesta la sobrecarga de información en los empleados":
+    "Como se manifiesta la sobrecarga de informacion en los empleados":
     "- Errores frecuentes: Confusión en fórmulas de color, horarios o datos de clientes.\n"
     "- Estrés visible: Fatiga, irritabilidad o dificultad para concentrarse.\n"
     "- Disminución en la calidad del servicio: Tratamientos mal ejecutados o clientes insatisfechos.\n"
     "- Ausentismo o rotación alta: Empleados que renuncian por agotamiento.",
 
-    "Qué impacto tiene esta sobrecarga en la experiencia del cliente":
+    "Que impacto tiene esta sobrecarga en la experiencia del cliente":
     "- Servicio inconsistente: Resultados variables (ej: tonos de color no uniformes).\n"
     "- Atención impersonal: Empleados distraídos o sin tiempo para explicaciones detalladas.\n"
     "- Quejas recurrentes: Sobre citas mal agendadas o malentendidos en servicios.",
 
-    "Qué errores de gestión suelen causar esta saturación":
+    "Que errores de gestión suelen causar esta saturacion":
     "- Falta de sistemas digitales: Usar agendas en papel o recordatorios manuales.\n"
     "- Protocolos ambiguos: No tener guías paso a paso para cada servicio.\n"
     "- Reuniones innecesarias: Juntas largas sin agendas claras que roban tiempo productivo.",
 
-    "Cómo puede un salón de belleza prevenir la sobrecarga":
+    "Como puede un salon de belleza prevenir la sobrecarga":
     "- Centralizar la comunicación: Usar una app de gestión (ej: Square, Fresha) para agenda, inventario y protocolos.\n"
     "- Capacitación escalonada: Introducir nuevos productos/procedimientos en módulos, no todo a la vez.\n"
     "- Listas de verificación (checklists): Para servicios repetitivos (ej: alisado brasileño).\n"
     "- Encuestas al equipo: Preguntar qué información les abruma y ajustar procesos.",
 
-    "Qué rol juega la tecnología en reducir esta problemática":
+    "Que rol juega la tecnología en reducir esta problematica":
     "- Software de gestión: Automatiza recordatorios, historial de clientes y inventario.\n"
     "- Videotutoriales: Permite repasar técnicas sin depender de supervisores.\n"
     "- Chats internos con moderación: Limitar grupos de WhatsApp a temas urgentes.",
 
-    "Ejemplo práctico: ¿Cómo manejar la introducción de una nueva línea de productos?":
+    "Ejemplo práctico: ¿Cómo manejar la introducción de una nueva línea de productos":
     "- Fase 1: Sesión teórica breve (30 min) con fichas técnicas.\n"
     "- Fase 2: Demostración práctica en modelos (sin clientes reales).\n"
     "- Fase 3: Prueba supervisada con descuentos para clientes frecuentes.\n"
