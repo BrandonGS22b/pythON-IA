@@ -72,22 +72,26 @@ qa_dict = {
 
    
 
-    "Que factores contribuyen a la sobrecarga de información en los empleados de un salón de belleza":
+    "¿Qué factores contribuyen a la sobrecarga de información en los empleados de un salón de belleza?":
     "- Comunicación desorganizada: Instrucciones dadas verbalmente sin registro escrito, o múltiples canales (WhatsApp, correos, papel).\n"
     "- Falta de capacitación estructurada: Entrenamientos apresurados sin manuales claros.\n"
     "- Exceso de tareas simultáneas: Asignar servicios complejos (ej: coloración + cortes) sin tiempos de transición.\n"
-    "- Actualizaciones constantes: Cambios en productos/protocolos sin documentación adecuada.",
+    "- Actualizaciones constantes: Cambios en productos/protocolos sin documentación adecuada.\n"
+    "- Link para más información ingresa al siguiente link o enlace:https://youtu.be/4gRUOdXXZVY?si=U9gs_nGLV4mvbrMs",
 
-    "Como se manifiesta la sobrecarga de informacion en los empleados":
+    "¿Cómo se manifiesta la sobrecarga de información en los empleados?":
     "- Errores frecuentes: Confusión en fórmulas de color, horarios o datos de clientes.\n"
     "- Estrés visible: Fatiga, irritabilidad o dificultad para concentrarse.\n"
     "- Disminución en la calidad del servicio: Tratamientos mal ejecutados o clientes insatisfechos.\n"
-    "- Ausentismo o rotación alta: Empleados que renuncian por agotamiento.",
+    "- Ausentismo o rotación alta: Empleados que renuncian por agotamiento.\n"
+    "- Link para más información ingresa al siguiente link o enlace:https://youtu.be/HJm8OpgaGH8?si=SnZjahCRElbXLAvu",
+    
 
-    "Que impacto tiene esta sobrecarga en la experiencia del cliente":
+    "¿Qué impacto tiene la sobrecarga de información en la experiencia del cliente?":
     "- Servicio inconsistente: Resultados variables (ej: tonos de color no uniformes).\n"
     "- Atención impersonal: Empleados distraídos o sin tiempo para explicaciones detalladas.\n"
-    "- Quejas recurrentes: Sobre citas mal agendadas o malentendidos en servicios.",
+    "- Quejas recurrentes: Sobre citas mal agendadas o malentendidos en servicios.\n"
+    "- Link para más información ingresa al siguiente link o enlace:https://youtu.be/7BxerAqkVOU?si=C2zfTyhjb2Xq-20p",
 
     "Que errores de gestión suelen causar esta saturacion":
     "- Falta de sistemas digitales: Usar agendas en papel o recordatorios manuales.\n"
