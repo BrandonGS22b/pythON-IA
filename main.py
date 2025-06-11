@@ -67,6 +67,49 @@ qa_dict = {
     "Sabes algún truco útil": "Claro, un truco útil es el de usar atajos de teclado para mejorar tu productividad. Por ejemplo, en la mayoría de los navegadores puedes presionar *Ctrl + T* para abrir una nueva pestaña rápidamente. ¿Te interesa aprender más trucos?",
     "Que piensas sobre la tecnología": "Creo que la tecnología ha cambiado el mundo de muchas maneras, desde mejorar la comunicación hasta facilitar el acceso a la información. ¿A ti qué te parece?",
     "Que es lo más interesante de la historia": "La historia está llena de eventos fascinantes. Uno de los momentos más interesantes fue la Revolución Industrial, que cambió por completo la forma en que vivimos. ¿Te interesa algún período histórico en particular?",
+
+
+
+   
+
+    "Que factores contribuyen a la sobrecarga de información en los empleados de un salón de belleza":
+    "- Comunicación desorganizada: Instrucciones dadas verbalmente sin registro escrito, o múltiples canales (WhatsApp, correos, papel).\n"
+    "- Falta de capacitación estructurada: Entrenamientos apresurados sin manuales claros.\n"
+    "- Exceso de tareas simultáneas: Asignar servicios complejos (ej: coloración + cortes) sin tiempos de transición.\n"
+    "- Actualizaciones constantes: Cambios en productos/protocolos sin documentación adecuada.",
+
+    "Cómo se manifiesta la sobrecarga de información en los empleados":
+    "- Errores frecuentes: Confusión en fórmulas de color, horarios o datos de clientes.\n"
+    "- Estrés visible: Fatiga, irritabilidad o dificultad para concentrarse.\n"
+    "- Disminución en la calidad del servicio: Tratamientos mal ejecutados o clientes insatisfechos.\n"
+    "- Ausentismo o rotación alta: Empleados que renuncian por agotamiento.",
+
+    "Qué impacto tiene esta sobrecarga en la experiencia del cliente":
+    "- Servicio inconsistente: Resultados variables (ej: tonos de color no uniformes).\n"
+    "- Atención impersonal: Empleados distraídos o sin tiempo para explicaciones detalladas.\n"
+    "- Quejas recurrentes: Sobre citas mal agendadas o malentendidos en servicios.",
+
+    "Qué errores de gestión suelen causar esta saturación":
+    "- Falta de sistemas digitales: Usar agendas en papel o recordatorios manuales.\n"
+    "- Protocolos ambiguos: No tener guías paso a paso para cada servicio.\n"
+    "- Reuniones innecesarias: Juntas largas sin agendas claras que roban tiempo productivo.",
+
+    "Cómo puede un salón de belleza prevenir la sobrecarga":
+    "- Centralizar la comunicación: Usar una app de gestión (ej: Square, Fresha) para agenda, inventario y protocolos.\n"
+    "- Capacitación escalonada: Introducir nuevos productos/procedimientos en módulos, no todo a la vez.\n"
+    "- Listas de verificación (checklists): Para servicios repetitivos (ej: alisado brasileño).\n"
+    "- Encuestas al equipo: Preguntar qué información les abruma y ajustar procesos.",
+
+    "Qué rol juega la tecnología en reducir esta problemática":
+    "- Software de gestión: Automatiza recordatorios, historial de clientes y inventario.\n"
+    "- Videotutoriales: Permite repasar técnicas sin depender de supervisores.\n"
+    "- Chats internos con moderación: Limitar grupos de WhatsApp a temas urgentes.",
+
+    "Ejemplo práctico: ¿Cómo manejar la introducción de una nueva línea de productos?":
+    "- Fase 1: Sesión teórica breve (30 min) con fichas técnicas.\n"
+    "- Fase 2: Demostración práctica en modelos (sin clientes reales).\n"
+    "- Fase 3: Prueba supervisada con descuentos para clientes frecuentes.\n"
+    "- Soporte continuo: Grupo de preguntas en Slack con respuestas de expertos."
 }
 
 # Endpoint
